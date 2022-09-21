@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+// Variables
+$primary-color: hsl(40, 100%, 50%);
+$primary-dark: hsl(40, 100%, 40%);
+$primary-light: hsl(40, 100%, 80%);
+$secondary-color: hsl(0, 0%, 20%);
+$white-color: hsl(0, 0%, 100%);
+$black-color: hsl(0, 0%, 0%);
+$carousel-button: hsla(0, 0%, 100%, 0.5);
+$topic-margin: 2rem 1rem;
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: $primary-light;
+	color: $white-color;
+}
+
+// Header
+header {
+	background: $secondary-color;
+	width: 100%;
+	height: 4rem;
+	padding: 0 2rem;
+	z-index: 10;
+
+	&.fixed {
+		position: fixed;
+	}
+
+	.logo {
+		color: $white-color;
+		font-size: 2rem;
+		font-weight: 200;
+		line-height: 4rem;
+		text-transform: uppercase;
+		float: left;
+	}
+
+	nav {
+		float: right;
+
+		.menu {
+			float: right;
+			font-size: 2rem;
+			line-height: 4rem;
+			border: none;
+			color: $white-color;
+			background: transparent;
+			cursor: pointer;
+
+			&:hover {
+				color: $primary-dark;
+			}
+			&:active {
+				color: $primary-light;
+			}
+		}
+
+		ul {
+			position: fixed;
+			margin-top: 4rem;
+			padding-top: 4rem;
+			text-align: center;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background: $secondary-color;
+			font-size: 2rem;
+			display: none;
+
+			&.active {
+				display: block;
+			}
+
+			li {
+				margin: 2rem 0;
+				a {
+					color: $white-color;
+
+					&:hover {
+						color: $primary-dark;
+					}
+					&:active {
+						color: $primary-light;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Hero Section
+
+section.hero {
+	.carousel {
+		position: relative;
+		width: 100%;
+		height: 25rem;
+		overflow: hidden;
+		margin: 0 auto;
+
+		&__track-container {
+			// background: skyblue;
+			height: 100%;
+			position: relative;
+		}
+
+		&__track {
+			position: relative;
+			height: 100%;
+			transition: 0.25s ease-in-out;
+		}
+
+		&__slide {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 2rem;
+			background: transparent;
+			color: $carousel-button;
+			border: none;
+			cursor: pointer;
+
+			&:hover {
+				color: $primary-dark;
+			}
+			&:active {
+				color: $primary-light;
+			}
+
+			&--left {
+				left: 0.5rem;
+			}
+			&--right {
+				right: 0.5rem;
+			}
+		}
+	}
+
+	.usp {
+		margin: $topic-margin;
+
+		&-item {
+			color: $black-color;
+			background: $primary-color;
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin: 0.5rem 0;
+			padding: 0.5rem;
+			border: 0.2rem solid $primary-dark;
+			border-radius: 0.5rem;
+		}
+	}
+}
+
+// Info Section
+section.info {
+	.contact-form {
+		margin: $topic-margin;
+		color: $black-color;
+
+		form#contact {
+			.form-item {
+				padding: 0.25rem 0;
+
+				.form-label {
+					font-size: 1.2rem;
+					font-weight: 600;
+				}
+				.form-input {
+					// All Common Styles here
+					width: 100%;
+					padding: 0.25rem 0.5rem;
+					margin: 0.25rem 0;
+					line-height: 1.25rem;
+					font-size: 1.2rem;
+					font-family: "Poppins", sans-serif;
+					outline: none;
+					border: none;
+					border-radius: 0.25rem;
+					background: $primary-color;
+					color: $black-color;
+
+					&::placeholder {
+						color: $black-color;
+						opacity: 0.8;
+					}
+
+					&:focus {
+						background: $primary-dark;
+						color: $white-color;
+
+						&::placeholder {
+							color: $white-color;
+							opacity: 0.8;
+						}
+					}
+				}
+				input[type="text"],
+				input[type="email"],
+				input[type="number"] {
+					height: 2.5rem;
+				}
+				textarea {
+					height: 10rem;
+					resize: none;
+				}
+			}
+			button#contact-submit {
+				padding: 0.5rem 0.75rem;
+				margin-top: 0.5rem;
+				border: none;
+				border-radius: 0.25rem;
+				background: $primary-color;
+				text-transform: uppercase;
+				font-size: 1.2rem;
+
+				&:hover,
+				&:active {
+					background: $primary-dark;
+					color: $white-color;
+				}
+			}
+		}
+	}
+
+	.faq {
+		margin: $topic-margin;
+		color: $black-color;
+
+		&-item {
+			margin: 1rem 0;
+			padding: 0.25rem;
+			background: $primary-color;
+			border-radius: 0.25rem;
+
+			.question {
+				font-size: 1.2rem;
+				font-weight: 600;
+				cursor: pointer;
+			}
+
+			.answer {
+				font-size: 0.9rem;
+				font-weight: 400;
+				background: $primary-light;
+				margin-top: 0.25rem;
+				padding: 0.2rem;
+				border-radius: 0.2rem;
+				display: none;
+
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background: $secondary-color;
+	padding: 0 2rem;
+	margin-top: 4rem;
+	width: 100%;
+	// height: 5rem; // Breaks on Mobile.
+
+	.logo {
+		width: 5rem;
+		height: 4rem;
+		position: relative;
+		top: -2rem;
+		left: 50%;
+		transform: translateX(-50%);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 25%;
+		}
+	}
+
+	.copyright {
+		position: relative;
+		// top: -2rem;
+		// margin-top: 0.25rem;
+		padding-bottom: 0.25rem;
+		text-align: center;
+		text-transform: capitalize;
+	}
+}
+
+// CTA
+.cta {
+	color: $black-color;
+	background: $primary-color;
+	margin: $topic-margin;
+	border: $primary-dark 0.25rem solid;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	text-align: center;
+
+	&-btn {
+		padding: 0.5rem 0.75rem;
+		margin-top: 0.5rem;
+		border: none;
+		border-radius: 0.25rem;
+		background: $primary-dark;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+
+		a {
+			color: $black-color;
+		}
+
+		&:hover,
+		&:active {
+			background: $primary-dark;
+			a {
+				color: $white-color;
+			}
+		}
+	}
+}
+
+// Topic Title
+.topic-title {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: $black-color;
+	text-transform: uppercase;
+	text-decoration: 0.2rem underline $black-color;
+}

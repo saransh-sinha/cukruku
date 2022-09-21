@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffdd99;
+  color: white;
+}
+
+header {
+  background: #333333;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  z-index: 10;
+}
+header.fixed {
+  position: fixed;
+}
+header .logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 4rem;
+  text-transform: uppercase;
+  float: left;
+}
+header nav {
+  float: right;
+}
+header nav .menu {
+  float: right;
+  font-size: 2rem;
+  line-height: 4rem;
+  border: none;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+header nav .menu:hover {
+  color: #cc8800;
+}
+header nav .menu:active {
+  color: #ffdd99;
+}
+header nav ul {
+  position: fixed;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #333333;
+  font-size: 2rem;
+  display: none;
+}
+header nav ul.active {
+  display: block;
+}
+header nav ul li {
+  margin: 2rem 0;
+}
+header nav ul li a {
+  color: white;
+}
+header nav ul li a:hover {
+  color: #cc8800;
+}
+header nav ul li a:active {
+  color: #ffdd99;
+}
+
+section.hero .carousel {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+section.hero .carousel__track-container {
+  height: 100%;
+  position: relative;
+}
+section.hero .carousel__track {
+  position: relative;
+  height: 100%;
+  transition: 0.25s ease-in-out;
+}
+section.hero .carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+section.hero .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.hero .carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+section.hero .carousel__button:hover {
+  color: #cc8800;
+}
+section.hero .carousel__button:active {
+  color: #ffdd99;
+}
+section.hero .carousel__button--left {
+  left: 0.5rem;
+}
+section.hero .carousel__button--right {
+  right: 0.5rem;
+}
+section.hero .usp {
+  margin: 2rem 1rem;
+}
+section.hero .usp-item {
+  color: black;
+  background: #ffaa00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 0.2rem solid #cc8800;
+  border-radius: 0.5rem;
+}
+
+section.info .contact-form {
+  margin: 2rem 1rem;
+  color: black;
+}
+section.info .contact-form form#contact .form-item {
+  padding: 0.25rem 0;
+}
+section.info .contact-form form#contact .form-item .form-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+section.info .contact-form form#contact .form-item .form-input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0;
+  line-height: 1.25rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  background: #ffaa00;
+  color: black;
+}
+section.info .contact-form form#contact .form-item .form-input::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+section.info .contact-form form#contact .form-item .form-input:focus {
+  background: #cc8800;
+  color: white;
+}
+section.info .contact-form form#contact .form-item .form-input:focus::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+section.info .contact-form form#contact .form-item input[type=text],
+section.info .contact-form form#contact .form-item input[type=email],
+section.info .contact-form form#contact .form-item input[type=number] {
+  height: 2.5rem;
+}
+section.info .contact-form form#contact .form-item textarea {
+  height: 10rem;
+  resize: none;
+}
+section.info .contact-form form#contact button#contact-submit {
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: #ffaa00;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+section.info .contact-form form#contact button#contact-submit:hover, section.info .contact-form form#contact button#contact-submit:active {
+  background: #cc8800;
+  color: white;
+}
+section.info .faq {
+  margin: 2rem 1rem;
+  color: black;
+}
+section.info .faq-item {
+  margin: 1rem 0;
+  padding: 0.25rem;
+  background: #ffaa00;
+  border-radius: 0.25rem;
+}
+section.info .faq-item .question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+section.info .faq-item .answer {
+  font-size: 0.9rem;
+  font-weight: 400;
+  background: #ffdd99;
+  margin-top: 0.25rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  display: none;
+}
+section.info .faq-item .answer.active {
+  display: block;
+}
+
+footer {
+  background: #333333;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  width: 100%;
+}
+footer .logo {
+  width: 5rem;
+  height: 4rem;
+  position: relative;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25%;
+}
+footer .copyright {
+  position: relative;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cta {
+  color: black;
+  background: #ffaa00;
+  margin: 2rem 1rem;
+  border: #cc8800 0.25rem solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+.cta-btn {
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: #cc8800;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.cta-btn a {
+  color: black;
+}
+.cta-btn:hover, .cta-btn:active {
+  background: #cc8800;
+}
+.cta-btn:hover a, .cta-btn:active a {
+  color: white;
+}
+
+.topic-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: 0.2rem underline black;
+}
+
+/*# sourceMappingURL=style.css.map */

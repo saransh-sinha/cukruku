@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- css -->
+		<link rel="stylesheet" href="dist/css/style.css" />
+		<!-- css -->
+
+		<title>Cukruku</title>
+
+		<!-- FontAwesome -->
+		<script
+			src="https://kit.fontawesome.com/0f527acfe4.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- FontAwesome -->
+	</head>
+	<body>
+		<header>
+			<div class="logo">Cukruku</div>
+
+			<nav>
+				<button class="menu">
+					<i class="fas fa-bars"></i>
+				</button>
+
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#usp">USP</a></li>
+					<li><a href="#contact-form">Contact</a></li>
+					<li><a href="#faq">FAQ</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="carousel">
+				<div class="carousel__track-container">
+					<ul class="carousel__track">
+						<li class="carousel__slide current-slide">
+							<img src="dist/img/saransh_banner_small.jpg" alt="" />
+						</li>
+
+						<li class="carousel__slide">
+							<img src="dist/img/Fried_Chicken.png" alt="" />
+						</li>
+
+						<li class="carousel__slide">
+							<img src="dist/img/pizza.cms" alt="" />
+						</li>
+
+						<li class="carousel__slide">
+							<img src="dist/img/milkshakes.jpg" alt="" />
+						</li>
+
+						<li class="carousel__slide">
+							<img src="dist/img/burger.jpg" alt="" />
+						</li>
+
+						<li class="carousel__slide">
+							<img src="dist/img/sandwich.jpg" alt="" />
+						</li>
+					</ul>
+				</div>
+
+				<button class="carousel__button carousel__button--left">
+					<i class="fas fa-chevron-left"></i>
+				</button>
+				<button class="carousel__button carousel__button--right">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+			</div>
+
+			<div class="cta">
+				<h2 class="cta-header">For Special Events</h2>
+				<button class="cta-btn"><a href="#contact-form">Contact Us</a></button>
+			</div>
+
+			<div class="usp" id="usp">
+				<div class="topic-title">
+					<h2>USP</h2>
+				</div>
+
+				<div class="usp-item">Covering NO franchise cost.</div>
+				<div class="usp-item">INDIA's fastest emerging fast food brand.</div>
+				<div class="usp-item">It's Better to be your own BOSS.</div>
+				<div class="usp-item">Futuristic Food Business.</div>
+				<div class="usp-item">
+					Fresh and 100% new food concept in your town.
+				</div>
+				<div class="usp-item">
+					Be the Revolutionist in food business of your town.
+				</div>
+			</div>
+		</section>
+
+		<section class="info">
+			<div class="contact-form" id="contact-form">
+				<div class="topic-title">
+					<h2>Contact Us</h2>
+				</div>
+
+				<form id="contact" method="post" onsubmit="return postToGoogle();">
+					<div class="form-item">
+						<label for="name" class="form-label">Name: </label>
+						<input
+							type="text"
+							name="entry.1879304393"
+							id="name"
+							class="form-input"
+							placeholder="[Required]"
+							required
+						/>
+					</div>
+					<div class="form-item">
+						<label for="mobile" class="form-label">Mobile No: </label>
+						<input
+							type="number"
+							name="entry.1872128658"
+							id="mobile"
+							class="form-input"
+							placeholder="[Required]"
+							required
+						/>
+					</div>
+					<div class="form-item">
+						<label for="email" class="form-label">Email: </label>
+						<input
+							type="email"
+							name="entry.1309921460"
+							id="email"
+							class="form-input"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="city" class="form-label">City: </label>
+						<input
+							type="text"
+							name="entry.1957350639"
+							id="city"
+							class="form-input"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="state" class="form-label">State/UT: </label>
+						<input
+							type="text"
+							name="entry.967668950"
+							id="state"
+							class="form-input"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="message" class="form-label">Message: </label>
+						<textarea
+							name="entry.2061827451"
+							id="message"
+							cols="30"
+							rows="10"
+							class="form-input"
+						></textarea>
+					</div>
+					<button type="submit" id="contact-submit">Submit</button>
+				</form>
+			</div>
+
+			<div class="faq" id="faq">
+				<div class="topic-title">
+					<h2>FAQ</h2>
+				</div>
+
+				<div class="faq-item">
+					<div class="question">Lorem ipsum dolor sit amet consectetur.</div>
+					<div class="answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse
+						quas voluptate qui corrupti fugit soluta!
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="question">Lorem ipsum dolor sit amet consectetur.</div>
+					<div class="answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse
+						quas voluptate qui corrupti fugit soluta!
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="question">Lorem ipsum dolor sit amet consectetur.</div>
+					<div class="answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse
+						quas voluptate qui corrupti fugit soluta!
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="question">Lorem ipsum dolor sit amet consectetur.</div>
+					<div class="answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse
+						quas voluptate qui corrupti fugit soluta!
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="question">Lorem ipsum dolor sit amet consectetur.</div>
+					<div class="answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse
+						quas voluptate qui corrupti fugit soluta!
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="logo">
+				<img src="dist/img/saransh_banner_small.jpg" alt="" />
+			</div>
+
+			<div class="copyright">
+				<small>
+					&copy; Copyright <span class="copyright-year"></span>, Cukruku. All
+					Rights Reserved.
+				</small>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="dist/scripts/navbar.js"></script>
+		<script src="dist/scripts/carousel.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="dist/scripts/contact.js"></script>
+		<script src="dist/scripts/faq.js"></script>
+		<script src="dist/scripts/copyright.js"></script>
+	</body>
+</html>
